@@ -1,0 +1,64 @@
+:root {
+    --sz: 2.5vmin;
+    --tr: all 0.5s ease 0s;
+    --c-on-1: #fed501;
+    --c-on-2: #e4bf00;
+    --c-off-1: #224056;
+    --c-off-2: #172c3c;
+    --c-wht-1: #edecf5;
+    --c-wht-2: #eaedef;
+    --c-wht-3: #ccd2d5;
+}    
+
+* {
+    box-sizing: border-box;
+}
+
+.toggle {
+    position: relative;
+    width: calc(var(--sz) * 4);
+    height: calc(var(--sz) * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.9);
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggle label {
+    position: absolute;
+    width: calc(var(--sz) * 4);
+    height: calc(var(--sz) * 2);
+    background: var(--c-off-1);
+    border-radius: var(--sz);
+    transition: background-color 0.3s ease;
+}    
+
+.toggle input:checked + label {
+    background: var(--c-on-1);  
+}
+
+.toggle .thumb {
+    position: absolute;
+    width: calc(var(--sz)* 2);
+    height: calc(var(--sz)* 2);
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: var(--sz);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+
+.toggle input:checked + label .thumb {
+    transform: translateX(calc(var(--sz) * 2));
+} 

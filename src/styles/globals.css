@@ -1,0 +1,133 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  scroll-padding-top: 80px;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Theme Toggle Styles */
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  z-index: 50;
+}
+
+.toggle-switch {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-thumb {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+
+.toggle-modern .toggle-track {
+  width: 60px;
+  height: 32px;
+  background: #e2e8f0;
+  border: 2px solid #94a3b8;
+  border-radius: 16px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-modern.on .toggle-track {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  border-color: #4f46e5;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(79, 70, 229, 0.3);
+}
+
+.toggle-modern .toggle-thumb {
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  border: 2px solid #94a3b8;
+}
+
+.toggle-modern.on .toggle-thumb {
+  transform: translateX(28px);
+  background: #fcd34d;
+  border-color: #4f46e5;
+}
+
+.thumb-icon {
+  font-size: 14px;
+  font-weight: bold;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  transform: translateY(1px);
+}
+
+.toggle-modern.on .thumb-icon {
+  color: #4f46e5;
+}
+
+/* Add a subtle glow effect for better visibility */
+.toggle-modern {
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.1));
+}
+
+.toggle-modern.on {
+  filter: drop-shadow(0 0 12px rgba(79, 70, 229, 0.3));
+}
+
+/* Fix for double scrollbars */
+.App {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+} 
