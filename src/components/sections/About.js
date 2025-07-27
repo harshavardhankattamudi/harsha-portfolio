@@ -149,7 +149,7 @@ const About = () => {
                       <Award className="w-4 h-4 ml-2" />
                     </a>
                   </div>
-                  <div className="text-gray-600 dark:text-gray-200 mt-1">Current CGPA: <span className="font-semibold text-green-600">8.76</span></div>
+                  <div className="text-gray-600 dark:text-gray-200 mt-1">Current CGPA: <span className="font-semibold text-green-600">8.7883</span></div>
                 </motion.div>
                 
                 <motion.div 

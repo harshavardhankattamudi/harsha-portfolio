@@ -104,9 +104,7 @@ const Hero = ({ scrollToSection }) => {
           <p className="text-gray-500 dark:text-gray-200 mb-8 max-w-md">
             Aspiring Computer Science student passionate about full-stack web development. Seeking an internship to gain hands-on experience and contribute to real-world projects. Skilled in front-end and back-end technologies, with a focus on building responsive and scalable web applications.
           </p>
-          <p className="text-sm text-orange-500 dark:text-orange-400 mb-4 font-medium">
-            🚀 Auto-deployment test: Updated via GitHub push!
-          </p>
+    
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start items-start w-full mt-2">
             <button
               onClick={() => scrollToSection('contact')}

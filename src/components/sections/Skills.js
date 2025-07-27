@@ -5,7 +5,7 @@ import { useRef } from "react";
 const technicalSkills = [
   {
     category: 'Programming Languages',
-    skills: ['C++', 'Python'],
+    skills: ['C++', 'Python','java'],
   },
   {
     category: 'Database',

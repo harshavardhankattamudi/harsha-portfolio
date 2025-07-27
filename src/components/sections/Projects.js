@@ -19,8 +19,8 @@ const projects = [
     description:
       'A portal for citizens to report local issues (like potholes, broken streetlights), where reports are geolocated, escalated, visualized, and tracked through resolution.',
     tech: ['React', 'Flask', 'Python', 'REST API', 'JavaScript', 'HTML', 'CSS'],
-    githubUrl: '#',
-    externalUrl: '#',
+    githubUrl: 'https://github.com/harshavardhankattamudi/civic-management-system',
+    externalUrl: 'https://civic-management-system-n83u6n4ha.vercel.app/',
     category: 'Web Development',
     image: '🏛️',
     featured: true,
@@ -37,12 +37,12 @@ const projects = [
     featured: false,
   },
   {
-    title: 'Crop Classification and Yield Prediction using Machine Learning',
+    title: 'Crop Classification and Yield Prediction Web App',
     description:
-      'Built a machine learning model to classify crops and predict yield based on various environmental and soil parameters.',
-    tech: ['Python', 'Scikit-Learn', 'Pandas', 'NumPy', 'Machine Learning', 'Data Preprocessing', 'Feature Engineering'],
-    githubUrl: '#',
-    externalUrl: '#',
+      'Developed a machine learning model to classify crop types and predict yield based on environmental and soil parameters. Integrated the model into a Flask-based web application to enable real-time user interaction and predictions.',
+    tech: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Flask', 'HTML', 'CSS'],
+    githubUrl: 'https://github.com/harshavardhankattamudi/CropML',
+    externalUrl: 'https://cropml.onrender.com/',
     category: 'Machine Learning',
     image: '🌾',
     featured: false,
@@ -177,14 +177,17 @@ const Projects = () => {
                   <span className="text-xs text-gray-500 dark:text-gray-400">
                     {project.category}
                   </span>
-                  <motion.button
+                  <motion.a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-lg text-sm font-medium hover:from-orange-500 hover:to-orange-700 transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <Eye className="w-4 h-4" />
                     View Project
-                  </motion.button>
+                  </motion.a>
                 </div>
               </div>
             </motion.div>
