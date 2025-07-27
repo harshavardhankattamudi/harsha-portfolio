@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, Code, Database, Globe, Brain, Users, Award, GraduationCap, ExternalLink, Eye, Download, Star, ArrowRight } from 'lucide-react';
 import Navigation from './Navigation';
+import MobileNav from './MobileNav';
+import MobileFAB from './MobileFAB';
+import InstallPrompt from './InstallPrompt';
 import Hero from './sections/Hero';
 import About from './sections/About';
 import Skills from './sections/Skills';
@@ -61,6 +64,9 @@ const Portfolio = () => {
         activeSection={activeSection} 
         scrollToSection={scrollToSection} 
       />
+      <MobileNav />
+      <MobileFAB />
+      <InstallPrompt />
       <div className="flex flex-col flex-grow">
         <section id="home" className="min-h-screen"><Hero scrollToSection={scrollToSection} /></section>
         <section id="about" className="min-h-screen"><About /></section>
